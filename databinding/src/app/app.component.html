@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<h3>
+  Titulo que se encuentra en la clase TypeScript {{titulo}}
+</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="usr">Nombre:</label>
+        <input type="text" [(ngModel)]="datos.Nombre" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="Apellido">Apellido:</label>
+        <input type="text" [(ngModel)]="datos.Apellido"class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="usr">Documento:</label>
+        <input type="text" [(ngModel)]="datos.Documento" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="usr">Edad:</label>
+        <input type="text" [(ngModel)]="datos.Edad" class="form-control">
+      </div>
+
+      <button type="button" (click)="eventoBoton()" class="btn btn-primary btn-block"> Evento Angular</button>
+      <app-hijo [propiedadhijo]="datos"></app-hijo>
+
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+</div>
