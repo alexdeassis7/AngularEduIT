@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+  
+        <h1>Formulario</h1>
+        <form [formGroup]="formulario" (Submit)="onSubmit(formulario)">
+          <div class="formGroup">
+            <label for="exampleInputEmail1">Nombre</label>
+            <input type="text" formControlName="nombre" class="form-control" id="nombre" aria-describedby="ingrese nombre"  placeholder="ingrese nombre ">
+         <div class="errorcodigo" *ngIf="formulario.controls.nombre.errors">
+           el campo contiene un error
+         </div>
+          </div>
+          <div class="formGroup">
+            <label for="exampleInputEmail1">apellido</label>
+            <input type="text" formControlName="apellido" class="form-control" id="apellido" aria-describedby="ingrese apellido"  placeholder="ingrese apellido ">
+          </div>
+          <div class="errorcodigo" *ngIf="formulario.controls.apellido.errors">
+              el campo contiene un error
+            </div>
+  
+  
+          <div class="formGroup">
+            <label for="exampleInputPassword1">email </label>
+            <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="email help" placeholder="ingrese mail ">
+            <small id="emailHelp" class="form-text text-muted">heeeelppppp</small>
+          </div>
+          <div class="errorcodigo" *ngIf="formulario.controls.email.errors">
+              el campo contiene un error
+            </div>
+  
+          <div class="formGroupform-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+  
+  
+  
+      </div>
+    </div>
+  </div>
