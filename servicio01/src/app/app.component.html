@@ -1,0 +1,19 @@
+<h1>Listado de Productos</h1>
+<!--{{ productos | json}}-->
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Marca</td>
+      <td>Nombre</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of productos">
+      <td>{{producto.value._id}}</td>
+      <td>{{producto.value.marca}}</td>
+      <td>{{producto.value.nombre}}</td>
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>
